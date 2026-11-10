@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Citas Médicas</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"inverse-primary":"#84d1f0","on-tertiary":"#ffffff","surface-variant":"#e0e3e6","on-error-container":"#93000a","secondary-container":"#7cf994","on-secondary-fixed":"#002109","on-surface-variant":"#3f484d","error":"#ba1a1a","surface-container":"#ebeef1","secondary-fixed-dim":"#62df7d","on-tertiary-container":"#ffdec7","on-error":"#ffffff","error-container":"#ffdad6","outline":"#6f787d","on-primary":"#ffffff","on-surface":"#181c1e","tertiary-fixed":"#ffdcc3","on-tertiary-fixed-variant":"#6e3900","on-tertiary-fixed":"#2f1500","on-secondary":"#ffffff","tertiary-container":"#9b5300","secondary":"#006e2d","inverse-surface":"#2d3133","surface-tint":"#006782","surface-container-low":"#f1f4f7","on-primary-container":"#bdeaff","secondary-fixed":"#7ffc97","surface":"#f7fafd","primary":"#00546b","surface-container-high":"#e5e8eb","on-secondary-container":"#007230","on-background":"#181c1e","surface-dim":"#d7dadd","on-primary-fixed":"#001f29","outline-variant":"#bfc8cd","surface-bright":"#f7fafd","primary-fixed":"#bbeaff","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#004d62","inverse-on-surface":"#eef1f4","tertiary-fixed-dim":"#ffb77d","tertiary":"#783f00","on-secondary-fixed-variant":"#005320","primary-container":"#0b6e8a","primary-fixed-dim":"#84d1f0","background":"#f7fafd","surface-container-highest":"#e0e3e6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","margin":"2rem","space-xl":"2rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">local_hospital</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Citas Médicas</span></div><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-lg"><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="agenda" href="/">Agenda</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="medicos" href="/medicos">Médicos</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="panel" href="/panel">Panel</a></nav><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-margin">
+<div class="w-full px-margin pt-space-lg flex flex-col gap-space-lg">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Gestión Clínica y Recursos</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sede Principal</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Médicos y consultorios</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Disponibilidad, bajas y lista de espera</p>
+</div>
+<!-- Quick Action / Status Summary Pill -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-sm self-start md:self-auto">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">2 Activos</span>
+</div>
+<span class="text-surface-variant font-bold">|</span>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-label-md text-label-md text-on-surface">1 En baja médica</span>
+</div>
+</div>
+</div>
+<!-- Feedback Message Container (empty as required) -->
+<div class="w-full transition-all duration-200" id="msg"></div>
+<!-- Summary of reassignments banner (empty container, styled amber notice ready for JS output) -->
+<div class="empty:hidden rounded-xl bg-tertiary-fixed/40 p-space-md shadow-sm" id="resumen-baja">
+<div class="flex items-center gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-tertiary/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[20px]">notification_important</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-tertiary-fixed-variant">Aviso de Reasignación Automática</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">Se reasignaron 15 citas, 2 quedaron por reagendar</span>
+</div>
+</div>
+</div>
+<!-- Section 1: Médicos -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">stethoscope</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Médicos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Equipo facultativo asignado a la jornada</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-sm py-1 rounded-full">3 registrados</span>
+</div>
+<!-- Grid Médicos -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="medicos">
+<!-- Doctor 1: Dra. Ana Torres (Disponible) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0 shadow-sm">
+                AT
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Dra. Ana Torres</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Medicina general</span>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md shrink-0 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Disponible
+            </span>
+</div>
+<div class="flex items-center justify-between pt-space-sm pl-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">event_available</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">5 citas activas</span>
+</div>
+<button class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-error bg-error-container/30 hover:bg-error-container/60 transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">medical_services</span>
+              Dar de baja (enfermo)
+            </button>
+</div>
+</div>
+<!-- Doctor 2: Dr. Carlos Méndez (De baja) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-surface-container text-on-surface-variant font-headline-sm text-headline-sm flex items-center justify-center shrink-0 shadow-sm">
+                CM
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Dr. Carlos Méndez</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Traumatología</span>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md shrink-0 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              De baja
+            </span>
+</div>
+<div class="flex items-center justify-between pt-space-sm pl-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline">event_busy</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">0 citas activas</span>
+</div>
+<button class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-secondary bg-secondary-container/40 hover:bg-secondary-container/70 transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+              Reincorporar
+            </button>
+</div>
+</div>
+<!-- Doctor 3: Dra. Lucía Morales (Disponible) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between gap-space-lg relative overflow-hidden group">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0 shadow-sm">
+                LM
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Dra. Lucía Morales</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Pediatría</span>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md shrink-0 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Disponible
+            </span>
+</div>
+<div class="flex items-center justify-between pt-space-sm pl-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">event_available</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">8 citas activas</span>
+</div>
+<button class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-error bg-error-container/30 hover:bg-error-container/60 transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">medical_services</span>
+              Dar de baja (enfermo)
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Consultorios -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">meeting_room</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Consultorios</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ocupación y disponibilidad de salas en planta</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-sm py-1 rounded-full">4 salas</span>
+</div>
+<!-- Grid Consultorios (4 columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter" id="consultorios">
+<!-- Card C1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary font-headline-sm">
+                C1
+              </div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Consultorio 1</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md">
+              Libre
+            </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant pt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span class="font-body-sm text-body-sm">0 citas activas</span>
+</div>
+</div>
+<!-- Card C2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary font-headline-sm">
+                C2
+              </div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Consultorio 2</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed/60 text-tertiary font-label-md text-label-md">
+              En uso
+            </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant pt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">3 citas activas</span>
+</div>
+</div>
+<!-- Card C3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary font-headline-sm">
+                C3
+              </div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Consultorio 3</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed/60 text-tertiary font-label-md text-label-md">
+              En uso
+            </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant pt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">5 citas activas</span>
+</div>
+</div>
+<!-- Card C4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary font-headline-sm">
+                C4
+              </div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Consultorio 4</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md">
+              Libre
+            </span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant pt-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span class="font-body-sm text-body-sm">1 cita activa</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Lista de espera -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Lista de espera</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reasignación inteligente ante cancelaciones imprevistas</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg">
+<!-- Registration Form -->
+<form class="flex flex-col md:flex-row items-center gap-space-md w-full" id="fe">
+<div class="relative w-full md:flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">person_search</span>
+<input class="w-full h-[42px] pl-10 pr-space-md rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest font-body-md text-body-md transition-colors" name="paciente" placeholder="Nombre del paciente" type="text"/>
+</div>
+<div class="relative w-full md:w-72">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">clinical_notes</span>
+<select class="w-full h-[42px] pl-10 pr-space-lg rounded-lg bg-surface-container-low text-on-surface focus:outline-none focus:bg-surface-container-lowest font-body-md text-body-md appearance-none transition-colors" id="sel-medico-espera" name="medico">
+<option disabled="" selected="" value="">Médico que prefiere</option>
+<option value="torres">Dra. Ana Torres (Medicina General)</option>
+<option value="morales">Dra. Lucía Morales (Pediatría)</option>
+<option value="mendez">Dr. Carlos Méndez (Traumatología)</option>
+<option value="cualquiera">Cualquier médico disponible</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+<button class="w-full md:w-auto h-[42px] px-space-lg rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-colors flex items-center justify-center gap-space-xs shrink-0 shadow-sm" type="submit">
+<span class="material-symbols-outlined text-[18px]">add</span>
+            Agregar a la lista
+          </button>
+</form>
+<!-- Queue Listing -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Pacientes en cola prioritaria</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">2 en espera</span>
+</div>
+<div class="flex flex-col gap-space-sm" id="espera">
+<!-- Item 1 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-label-md text-label-md flex items-center justify-center shrink-0">
+                  1
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface">Elena Gómez Rivas</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary">person</span>
+<span class="font-body-sm text-body-sm">Preferencia: Dra. Ana Torres</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm sm:self-center self-end">
+<span class="px-space-sm py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history</span>
+                  Hace 25 min
+                </span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-label-md text-label-md flex items-center justify-center shrink-0">
+                  2
+                </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-lg font-semibold text-on-surface">Marcos Salcedo</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-primary">person</span>
+<span class="font-body-sm text-body-sm">Preferencia: Dra. Lucía Morales</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm sm:self-center self-end">
+<span class="px-space-sm py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history</span>
+                  Hace 1h 10 min
+                </span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Automatic Allocation Caption -->
+<div class="flex items-start gap-space-sm pt-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cuando se cancela una cita, el hueco se ofrece automáticamente al primero de la lista.
+          </p>
+</div>
+</div>
+</section>
+</div>
+</div></main>
+
+<script>
+    let citas = JSON.parse(localStorage.getItem('citas_medicas')) || [];
+    let medicosEstado = JSON.parse(localStorage.getItem('medicos_estado')) || {};
+    let listaEspera = JSON.parse(localStorage.getItem('lista_espera')) || [
+      { paciente: "Elena Gómez Rivas", preferencia: "Dra. Ana Torres", tiempo: "Hace 25 min" },
+      { paciente: "Marcos Salcedo", preferencia: "Dra. Lucía Morales", tiempo: "Hace 1h 10 min" }
+    ];
+
+    function persistirDatos() {
+      localStorage.setItem('citas_medicas', JSON.stringify(citas));
+      localStorage.setItem('medicos_estado', JSON.stringify(medicosEstado));
+      localStorage.setItem('lista_espera', JSON.stringify(listaEspera));
+    }
+
+    function mostrarMensaje(texto, tipo = "success", containerId = "msg") {
+      const contenedor = document.getElementById(containerId);
+      if (!contenedor) return;
+      const bgColor = tipo === "success" ? "bg-[#dcfce7] text-[#16a34a]" : "bg-[#fee2e2] text-[#dc2626]";
+      contenedor.className = `w-full p-space-md rounded-lg font-body-md text-body-md ${bgColor} transition-all duration-300`;
+      contenedor.innerHTML = `<div class="flex items-center justify-between"><span>${texto}</span><button onclick="this.parentElement.parentElement.innerHTML=''" class="font-bold">×</button></div>`;
+      setTimeout(() => { if (contenedor) contenedor.innerHTML = ""; }, 4000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const formEspera = document.getElementById("fe");
+      if (formEspera) {
+        formEspera.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const paciente = formEspera.querySelector("input[name='paciente']").value;
+          const preferencia = formEspera.querySelector("select[name='medico']").selectedOptions[0].text;
+          listaEspera.push({ paciente, preferencia, tiempo: "Justo ahora" });
+          persistirDatos();
+          mostrarMensaje("Paciente agregado a la lista de espera correctamente.");
+          formEspera.reset();
+          renderizarListaEspera();
+        });
+        renderizarListaEspera();
+      }
+    });
+
+    function renderizarListaEspera() {
+      const contenedorEspera = document.getElementById("espera");
+      if (!contenedorEspera) return;
+      if (listaEspera.length === 0) {
+        contenedorEspera.innerHTML = `<p class="text-outline text-sm py-2">No hay pacientes en la lista de espera.</p>`;
+        return;
+      }
+      contenedorEspera.innerHTML = listaEspera.map((item, index) => `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors gap-space-sm">
+          <div class="flex items-center gap-space-md">
+            <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-label-md flex items-center justify-center shrink-0">${index + 1}</div>
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-body-lg font-semibold text-on-surface">${item.paciente}</span>
+              <div class="flex items-center gap-space-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-[15px] text-primary">person</span>
+                <span class="font-body-sm text-body-sm">Preferencia: ${item.preferencia}</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm sm:self-center self-end">
+            <span class="px-space-sm py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">history</span>${item.tiempo}
+            </span>
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+          </div>
+        </div>
+      `).join("");
+    }
+  </script>
+
+</body></html>

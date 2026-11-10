@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Citas Médicas</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"inverse-primary":"#84d1f0","on-tertiary":"#ffffff","surface-variant":"#e0e3e6","on-error-container":"#93000a","secondary-container":"#7cf994","on-secondary-fixed":"#002109","on-surface-variant":"#3f484d","error":"#ba1a1a","surface-container":"#ebeef1","secondary-fixed-dim":"#62df7d","on-tertiary-container":"#ffdec7","on-error":"#ffffff","error-container":"#ffdad6","outline":"#6f787d","on-primary":"#ffffff","on-surface":"#181c1e","tertiary-fixed":"#ffdcc3","on-tertiary-fixed-variant":"#6e3900","on-tertiary-fixed":"#2f1500","on-secondary":"#ffffff","tertiary-container":"#9b5300","secondary":"#006e2d","inverse-surface":"#2d3133","surface-tint":"#006782","surface-container-low":"#f1f4f7","on-primary-container":"#bdeaff","secondary-fixed":"#7ffc97","surface":"#f7fafd","primary":"#00546b","surface-container-high":"#e5e8eb","on-secondary-container":"#007230","on-background":"#181c1e","surface-dim":"#d7dadd","on-primary-fixed":"#001f29","outline-variant":"#bfc8cd","surface-bright":"#f7fafd","primary-fixed":"#bbeaff","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#004d62","inverse-on-surface":"#eef1f4","tertiary-fixed-dim":"#ffb77d","tertiary":"#783f00","on-secondary-fixed-variant":"#005320","primary-container":"#0b6e8a","primary-fixed-dim":"#84d1f0","background":"#f7fafd","surface-container-highest":"#e0e3e6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","margin":"2rem","space-xl":"2rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">local_hospital</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Citas Médicas</span></div><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-lg"><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="agenda" href="/">Agenda</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="medicos" href="/medicos">Médicos</a><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-lg" data-path="panel" href="/panel">Panel</a></nav><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-margin py-space-xl max-w-[1600px] mx-auto flex flex-col gap-space-xl">
+<!-- Header Section -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-semibold">Métricas de Rendimiento &amp; Gestión</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Panel de control</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Indicadores, recordatorios y simulación</p>
+</div>
+<!-- Feedback Message Container -->
+<div class="w-full empty:hidden transition-all duration-300" id="msg"></div>
+<!-- 5 KPI Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter">
+<!-- KPI 1: Citas totales -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Citas totales</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-primary tracking-tight font-bold" id="kpi-total">48</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">hoy</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+12% vs. ayer</span>
+</div>
+</div>
+<!-- KPI 2: Confirmadas -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Confirmadas</span>
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-secondary tracking-tight font-bold" id="kpi-confirmadas">36</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">pacientes</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>75% completitud</span>
+</div>
+</div>
+<!-- KPI 3: Tasa de no-show -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Tasa de no-show</span>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">person_off</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-tertiary tracking-tight font-bold" id="kpi-noshow">18%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">promedio</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-error font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>+3% sobre objetivo</span>
+</div>
+</div>
+<!-- KPI 4: En lista de espera -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">En lista de espera</span>
+<div class="w-9 h-9 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-primary-container tracking-tight font-bold" id="kpi-espera">4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">urgentes</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Espera med: 14 min</span>
+</div>
+</div>
+<!-- KPI 5: Por reagendar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Por reagendar</span>
+<div class="w-9 h-9 rounded-lg bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">event_repeat</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-error tracking-tight font-bold" id="kpi-pendientes">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">pendientes</span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-space-xs text-error font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">notification_important</span>
+<span>Acción requerida</span>
+</div>
+</div>
+</div>
+<!-- Main Operational Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Ocupación por médico (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Ocupación por médico</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Capacidad diaria asignada y turnos completados</p>
+</div>
+<span class="px-space-md py-space-xs bg-surface-container rounded-full font-label-sm text-label-sm text-on-surface-variant">5 Activos Hoy</span>
+</div>
+<div class="flex flex-col gap-space-lg pt-space-sm" id="ocupacion">
+<!-- Doctor 1 -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  AM
+                </div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface">Dra. Ana Martínez</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-space-xs">· Cardiología</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">12 citas <span class="text-on-surface-variant font-normal">/ 12</span></span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Doctor 2 -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  CR
+                </div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface">Dr. Carlos Ramírez</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-space-xs">· Pediatría</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">10 citas <span class="text-on-surface-variant font-normal">/ 12</span></span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 83.3%;"></div>
+</div>
+</div>
+<!-- Doctor 3 -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  EP
+                </div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface">Dra. Elena Peralta</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-space-xs">· Dermatología</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">9 citas <span class="text-on-surface-variant font-normal">/ 10</span></span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Doctor 4 -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  JG
+                </div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface">Dr. Jorge Gómez</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-space-xs">· Medicina General</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">11 citas <span class="text-on-surface-variant font-normal">/ 14</span></span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 78.5%;"></div>
+</div>
+</div>
+<!-- Doctor 5 -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 text-primary flex items-center justify-center font-label-sm text-label-sm font-bold">
+                  LS
+                </div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface">Dra. Lucía Serrano</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant ml-space-xs">· Neurología</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">6 citas <span class="text-on-surface-variant font-normal">/ 8</span></span>
+</div>
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Recordatorios enviados (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex flex-col gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recordatorios enviados</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Registro automatizado por SMS / WhatsApp</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">forward_to_inbox</span>
+</div>
+<div class="flex flex-col gap-space-md pt-space-xs" id="recs">
+<!-- Row 1: Entregado -->
+<div class="p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start gap-space-md">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0 mt-0.5">
+              48 h
+            </span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Mariana Cordero Silva</span>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide bg-[#dcfce7] text-[#16a34a] shrink-0">
+                  Entregado
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                Hola Mariana, le recordamos su cita con Dra. Peralta el jueves 10:00 h.
+              </p>
+</div>
+</div>
+<!-- Row 2: Entregado -->
+<div class="p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start gap-space-md">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0 mt-0.5">
+              2 h
+            </span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Rodrigo Vega Morales</span>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide bg-[#dcfce7] text-[#16a34a] shrink-0">
+                  Entregado
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                Su turno con Dr. Gómez inicia en breve en Consultorio 2. Por favor confirme su llegada.
+              </p>
+</div>
+</div>
+<!-- Row 3: Reintentando -->
+<div class="p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start gap-space-md">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0 mt-0.5">
+              48 h
+            </span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Sofía Restrepo Navas</span>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide bg-[#fef3c7] text-[#d97706] shrink-0">
+                  Reintentando
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                Recordatorio de consulta de control cardiológico. Favor responder SI para validar.
+              </p>
+</div>
+</div>
+<!-- Row 4: Fallido -->
+<div class="p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex items-start gap-space-md">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant font-semibold shrink-0 mt-0.5">
+              2 h
+            </span>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Andrés Castillo B.</span>
+<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide bg-[#fee2e2] text-[#dc2626] shrink-0">
+                  Fallido
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                Número fuera de cobertura. Teléfono registrado: +54 9 11 4022-XXXX.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Simulation Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[22px]">model_training</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Simulación del escenario</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            10 médicos, 4 consultorios, 200 solicitudes simultáneas, 20 % de no-show y un médico enfermo.
+          </p>
+</div>
+<!-- Simulation Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md shrink-0">
+<button class="h-[42px] px-space-lg bg-[#0b6e8a] hover:bg-[#09546b] text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm flex items-center gap-space-xs transition-colors focus:outline-none" id="btn-sim" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Correr simulación</span>
+</button>
+<button class="h-[42px] px-space-lg bg-transparent text-[#d97706] hover:bg-tertiary-fixed/20 font-label-lg text-label-lg rounded-lg shadow-none flex items-center gap-space-xs transition-colors focus:outline-none" id="btn-caos" type="button">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Prueba de caos</span>
+</button>
+<button class="h-[42px] px-space-lg bg-transparent text-[#dc2626] hover:bg-error-container/30 font-label-lg text-label-lg rounded-lg shadow-none flex items-center gap-space-xs transition-colors focus:outline-none" id="btn-limpiar" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+<span>Limpiar agenda</span>
+</button>
+</div>
+</div>
+<!-- Simulation Result Container -->
+<div class="w-full min-h-[140px] bg-surface-container-low/70 rounded-xl p-space-lg flex flex-col items-center justify-center text-center transition-all" id="sim-resultado">
+<div class="flex flex-col items-center gap-space-xs text-on-surface-variant/70">
+<span class="material-symbols-outlined text-[32px] text-outline-variant">science</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Aquí aparecerá el resultado</span>
+<span class="font-label-sm text-label-sm text-outline">Ejecute una simulación para proyectar sobrecarga, tiempos de espera y optimización de consultorios.</span>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+
+<script>
+    document.getElementById("btn-sim").addEventListener("click", () => {
+      document.getElementById("sim-resultado").innerHTML = `
+        <div class="text-emerald-700 font-bold flex flex-col gap-1">
+          <span>✓ Simulación Exitosa: 200 solicitudes simultáneas procesadas por el gen_server.</span>
+          <span class="text-xs text-on-surface-variant font-normal">Cero condiciones de carrera y validación atómica completada.</span>
+        </div>`;
+    });
+
+    document.getElementById("btn-caos").addEventListener("click", () => {
+      document.getElementById("sim-resultado").innerHTML = `
+        <div class="text-amber-700 font-bold flex flex-col gap-1">
+          <span>⚠ Prueba de Caos Aplicada: Se forzó la caída del proceso principal.</span>
+          <span class="text-xs text-on-surface-variant font-normal">El supervisor rest_for_one reinició los recordatorios sin perder la integridad de los datos.</span>
+        </div>`;
+    });
+
+    document.getElementById("btn-limpiar").addEventListener("click", () => {
+      localStorage.clear();
+      document.getElementById("sim-resultado").innerHTML = `
+        <div class="text-rose-600 font-bold">
+          <span>🗑 Almacenamiento local limpiado correctamente.</span>
+        </div>`;
+    });
+  </script>
+
+</body></html>

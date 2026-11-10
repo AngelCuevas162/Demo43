@@ -1,0 +1,8 @@
+{application, citas_medicas, [
+    {description, "Agenda de citas medicas sin traslapes y con recordatorios"},
+    {vsn, "0.1.0"},
+    {registered, [citas_sup, citas_agenda, citas_recordatorios]},
+    {mod, {citas_app, []}},
+    {applications, [kernel, stdlib, cowboy, jsx]},
+    {env, []}
+]}.

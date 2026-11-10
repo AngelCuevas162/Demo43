@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Citas Médicas</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"inverse-primary":"#84d1f0","on-tertiary":"#ffffff","surface-variant":"#e0e3e6","on-error-container":"#93000a","secondary-container":"#7cf994","on-secondary-fixed":"#002109","on-surface-variant":"#3f484d","error":"#ba1a1a","surface-container":"#ebeef1","secondary-fixed-dim":"#62df7d","on-tertiary-container":"#ffdec7","on-error":"#ffffff","error-container":"#ffdad6","outline":"#6f787d","on-primary":"#ffffff","on-surface":"#181c1e","tertiary-fixed":"#ffdcc3","on-tertiary-fixed-variant":"#6e3900","on-tertiary-fixed":"#2f1500","on-secondary":"#ffffff","tertiary-container":"#9b5300","secondary":"#006e2d","inverse-surface":"#2d3133","surface-tint":"#006782","surface-container-low":"#f1f4f7","on-primary-container":"#bdeaff","secondary-fixed":"#7ffc97","surface":"#f7fafd","primary":"#00546b","surface-container-high":"#e5e8eb","on-secondary-container":"#007230","on-background":"#181c1e","surface-dim":"#d7dadd","on-primary-fixed":"#001f29","outline-variant":"#bfc8cd","surface-bright":"#f7fafd","primary-fixed":"#bbeaff","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#004d62","inverse-on-surface":"#eef1f4","tertiary-fixed-dim":"#ffb77d","tertiary":"#783f00","on-secondary-fixed-variant":"#005320","primary-container":"#0b6e8a","primary-fixed-dim":"#84d1f0","background":"#f7fafd","surface-container-highest":"#e0e3e6"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1.5rem","margin":"2rem","space-xl":"2rem","space-xs":"0.25rem","space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">local_hospital</span></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Citas Médicas</span></div><div class="flex items-center gap-space-lg"><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-lg" data-path="agenda" href="/">Agenda</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="medicos" href="/medicos">Médicos</a><a class="px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="panel" href="/panel">Panel</a></nav><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full px-margin py-space-xl flex flex-col gap-space-xl">
+<!-- Top Header Section with Subtitle and Filter -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Módulo de Recepción</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Agenda de citas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+<span>Sin traslapes · con recordatorios a 48 h y 2 h</span>
+</p>
+</div>
+<!-- Quick Action Filter -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-xs rounded-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)]">
+<label class="font-label-md text-label-md text-on-surface-variant pl-space-sm flex items-center gap-1" for="filtro-estado">
+<span class="material-symbols-outlined text-[16px] text-primary">filter_list</span>
+<span>Filtrar:</span>
+</label>
+<select class="h-10 px-space-md bg-surface-container-low font-label-lg text-label-lg text-on-surface rounded-lg outline-none hover:bg-surface-variant transition-colors cursor-pointer" id="filtro-estado">
+<option value="Todas">Todas</option>
+<option value="Programadas">Programadas</option>
+<option value="Confirmadas">Confirmadas</option>
+<option value="Canceladas">Canceladas</option>
+<option value="Por reagendar">Por reagendar</option>
+</select>
+</div>
+</div>
+<!-- Main Operational Grid: Asymmetric Bento Style (Form 5 cols, Table/Overview 7 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Card: Nueva cita (5 columns on desktop) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] relative">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">calendar_add_on</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Nueva cita</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Registro ágil para turnos médicos</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-primary font-semibold px-space-sm py-1 rounded-full">Paso 1 de 1</span>
+</div>
+<form class="flex flex-col gap-space-md mt-space-sm" id="f">
+<!-- Two-column sub-grid for fast clerical data entry -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Médico -->
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface" for="sel-medico">Especialista / Médico</label>
+<div class="relative flex items-center">
+<select class="w-full h-[42px] px-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-lg outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_3px_rgba(11,110,138,0.15)] transition-all cursor-pointer appearance-none" id="sel-medico" name="medico" required="">
+<option disabled="" selected="" value="">Selecciona un médico</option>
+<option value="Dra. Ana Torres - Medicina General">Dra. Ana Torres - Medicina General</option>
+<option value="Dr. Carlos Ruiz - Pediatría">Dr. Carlos Ruiz - Pediatría</option>
+<option value="Dra. Elena Gómez - Dermatología">Dra. Elena Gómez - Dermatología</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-on-surface-variant text-[20px]">keyboard_arrow_down</span>
+</div>
+</div>
+<!-- Paciente -->
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface">Paciente</label>
+<div class="relative flex items-center">
+<input class="w-full h-[42px] px-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-lg outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_3px_rgba(11,110,138,0.15)] placeholder:text-outline transition-all" name="paciente" placeholder="Nombre del paciente" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-3 text-outline text-[18px]">person</span>
+</div>
+</div>
+<!-- Inicio -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Fecha y hora de inicio</label>
+<input class="w-full h-[42px] px-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-lg outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_3px_rgba(11,110,138,0.15)] transition-all" name="inicio" required="" type="datetime-local"/>
+</div>
+<!-- Duración -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Duración</label>
+<div class="relative flex items-center">
+<select class="w-full h-[42px] px-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-lg outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_3px_rgba(11,110,138,0.15)] transition-all cursor-pointer appearance-none" name="duracion_min">
+<option value="15">15 min</option>
+<option selected="" value="30">30 min</option>
+<option value="45">45 min</option>
+<option value="60">60 min</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-on-surface-variant text-[20px]">schedule</span>
+</div>
+</div>
+<!-- Consultorio -->
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface">Consultorio</label>
+<div class="relative flex items-center">
+<select class="w-full h-[42px] px-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-lg outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_3px_rgba(11,110,138,0.15)] transition-all cursor-pointer appearance-none" name="consultorio">
+<option selected="" value="">Automático</option>
+<option value="C1">C1 - Planta Baja</option>
+<option value="C2">C2 - Consultorio Adultos</option>
+<option value="C3">C3 - Pediatría Integral</option>
+<option value="C4">C4 - Procedimientos</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-on-surface-variant text-[20px]">room</span>
+</div>
+</div>
+<!-- Motivo -->
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface flex justify-between">
+<span>Motivo de consulta</span>
+<span class="text-outline font-label-sm font-normal">Opcional</span>
+</label>
+<input class="w-full h-[42px] px-space-md bg-surface-container-low font-body-md text-body-md text-on-surface rounded-lg outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_3px_rgba(11,110,138,0.15)] placeholder:text-outline transition-all" name="motivo" placeholder="Ej. Control de rutina, dolor lumbar o revisión de análisis" type="text"/>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-space-xs flex flex-col gap-space-sm">
+<button class="w-full h-11 bg-primary hover:bg-[#09546b] active:bg-[#074052] text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm hover:shadow transition-all flex items-center justify-center gap-space-sm" type="submit">
+<span class="material-symbols-outlined text-[20px]">add_task</span>
+<span>Agendar cita</span>
+</button>
+<p class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Si eliges Automático, el sistema asigna el primer consultorio libre.</span>
+</p>
+</div>
+</form>
+<!-- Message div for notifications -->
+<div class="empty:hidden mt-space-md p-space-md rounded-lg font-body-md text-body-md" id="msg"></div>
+</div>
+<!-- Card: Citas programadas (7 columns on desktop) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Summary Stats Mini-Bar for Quick Clinic Context -->
+<div class="grid grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">event_available</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">3</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Turnos en lista</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">how_to_reg</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">1</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Confirmado</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">notifications_active</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">1</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Por reagendar</p>
+</div>
+</div>
+</div>
+<!-- Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(11,110,138,0.05),0_2px_6px_-1px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col">
+<div class="p-space-lg flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">view_timeline</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Citas programadas</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Turnos registrados para la jornada activa</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-container/10 px-space-sm py-1 rounded-full">Vista en tiempo real</span>
+</div>
+<!-- Responsive Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<th class="py-space-sm px-space-md">#</th>
+<th class="py-space-sm px-space-md">Paciente</th>
+<th class="py-space-sm px-space-md">Médico</th>
+<th class="py-space-sm px-space-md">Consultorio</th>
+<th class="py-space-sm px-space-md">Inicio</th>
+<th class="py-space-sm px-space-md">Duración</th>
+<th class="py-space-sm px-space-md">Estado</th>
+<th class="py-space-sm px-space-md text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface" id="citas">
+<!-- Sample Row 1: Programada (Blue) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-on-surface-variant">1</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-primary flex items-center justify-center text-[11px] font-bold">
+                        MG
+                      </div>
+<span>Mariana González</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant whitespace-nowrap">
+                    Dra. Ana Torres
+                  </td>
+<td class="py-space-md px-space-md">
+<span class="inline-block px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-label-sm">C1</span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="font-label-md text-on-surface">10:30 AM</div>
+<div class="font-label-sm text-outline">Hoy, 24 Oct</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">30 min</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#e0f2fe] text-[#0284c7]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#0284c7]"></span>
+                      Programada
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-[#dcfce7] hover:bg-[#bbf7d0] text-[#16a34a] font-label-sm text-label-sm transition-colors flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Confirmar</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-[#fee2e2] hover:bg-[#fecaca] text-[#dc2626] font-label-sm text-label-sm transition-colors flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+<span>Cancelar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Sample Row 2: Confirmada (Green) -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-on-surface-variant">2</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-secondary flex items-center justify-center text-[11px] font-bold">
+                        RH
+                      </div>
+<span>Roberto Herrera</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant whitespace-nowrap">
+                    Dr. Carlos Ruiz
+                  </td>
+<td class="py-space-md px-space-md">
+<span class="inline-block px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-label-sm">C3</span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="font-label-md text-on-surface">11:15 AM</div>
+<div class="font-label-sm text-outline">Hoy, 24 Oct</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">45 min</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#dcfce7] text-[#16a34a]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16a34a]"></span>
+                      Confirmada
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-[#fee2e2] hover:bg-[#fecaca] text-[#dc2626] font-label-sm text-label-sm transition-colors flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+<span>Cancelar</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Sample Row 3: Por reagendar (Amber) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md font-label-md text-on-surface-variant">3</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-tertiary flex items-center justify-center text-[11px] font-bold">
+                        CP
+                      </div>
+<span>Camila Paredes</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant whitespace-nowrap">
+                    Dra. Elena Gómez
+                  </td>
+<td class="py-space-md px-space-md">
+<span class="inline-block px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-label-sm">C2</span>
+</td>
+<td class="py-space-md px-space-md whitespace-nowrap">
+<div class="font-label-md text-on-surface">12:30 PM</div>
+<div class="font-label-sm text-outline">Hoy, 24 Oct</div>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant">15 min</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-[#fef3c7] text-[#d97706]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#d97706]"></span>
+                      Por reagendar
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-[#dcfce7] hover:bg-[#bbf7d0] text-[#16a34a] font-label-sm text-label-sm transition-colors flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span>Confirmar</span>
+</button>
+<button class="px-space-sm py-1 rounded bg-[#fee2e2] hover:bg-[#fecaca] text-[#dc2626] font-label-sm text-label-sm transition-colors flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+<span>Cancelar</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination / Quick Summary -->
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Mostrando 3 de 3 registros activos</span>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Recordatorios automáticos activos</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+
+<script>
+    let citas = JSON.parse(localStorage.getItem('citas_medicas')) || [
+      { id: 1, paciente: "Mariana González", medico: "Dra. Ana Torres - Medicina General", consultorio: "C1", inicio: "2026-10-24T10:30", duracion: 30, estado: "Programada" },
+      { id: 2, paciente: "Roberto Herrera", medico: "Dr. Carlos Ruiz - Pediatría", consultorio: "C3", inicio: "2026-10-24T11:15", duracion: 45, estado: "Confirmada" },
+      { id: 3, paciente: "Camila Paredes", medico: "Dra. Elena Gómez - Dermatología", consultorio: "C2", inicio: "2026-10-24T12:30", duracion: 15, estado: "Por reagendar" }
+    ];
+
+    let medicosEstado = JSON.parse(localStorage.getItem('medicos_estado')) || {
+      "Dra. Ana Torres - Medicina General": "Disponible",
+      "Dr. Carlos Ruiz - Pediatría": "Disponible",
+      "Dra. Elena Gómez - Dermatología": "Disponible"
+    };
+
+    let listaEspera = JSON.parse(localStorage.getItem('lista_espera')) || [
+      { paciente: "Elena Gómez Rivas", preferencia: "Dra. Ana Torres", tiempo: "Hace 25 min" },
+      { paciente: "Marcos Salcedo", preferencia: "Dra. Lucía Morales", tiempo: "Hace 1h 10 min" }
+    ];
+
+    function persistirDatos() {
+      localStorage.setItem('citas_medicas', JSON.stringify(citas));
+      localStorage.setItem('medicos_estado', JSON.stringify(medicosEstado));
+      localStorage.setItem('lista_espera', JSON.stringify(listaEspera));
+    }
+
+    function mostrarMensaje(texto, tipo = "success", containerId = "msg") {
+      const contenedor = document.getElementById(containerId);
+      if (!contenedor) return;
+      const bgColor = tipo === "success" ? "bg-[#dcfce7] text-[#16a34a]" : "bg-[#fee2e2] text-[#dc2626]";
+      contenedor.className = `w-full p-space-md rounded-lg font-body-md text-body-md ${bgColor} transition-all duration-300`;
+      contenedor.innerHTML = `<div class="flex items-center justify-between"><span>${texto}</span><button onclick="this.parentElement.parentElement.innerHTML=''" class="font-bold">×</button></div>`;
+      setTimeout(() => { if (contenedor) contenedor.innerHTML = ""; }, 4000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const formCita = document.getElementById("f");
+      const tablaCitas = document.getElementById("citas");
+      const filtroEstado = document.getElementById("filtro-estado");
+
+      if (formCita) {
+        formCita.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const formData = new FormData(formCita);
+          const nuevaCita = {
+            id: Date.now(),
+            paciente: formData.get("paciente"),
+            medico: formData.get("medico"),
+            consultorio: formData.get("consultorio") || "C1",
+            inicio: formData.get("inicio"),
+            duracion: parseInt(formData.get("duracion_min")),
+            estado: "Programada"
+          };
+
+          const inicioNuevo = new Date(nuevaCita.inicio).getTime();
+          const finNuevo = inicioNuevo + nuevaCita.duracion * 60000;
+
+          const hayTraslape = citas.some(c => {
+            if (c.estado === "Cancelada") return false;
+            const inicioExistente = new Date(c.inicio).getTime();
+            const finExistente = inicioExistente + c.duracion * 60000;
+            const mismoMedicoOConsultorio = (c.medico === nuevaCita.medico || c.consultorio === nuevaCita.consultorio);
+            return mismoMedicoOConsultorio && (inicioNuevo < finExistente && inicioExistente < finNuevo);
+          });
+
+          if (hayTraslape) {
+            mostrarMensaje("Error: La cita se traslapa con otro turno existente para el mismo médico o consultorio.", "error");
+            return;
+          }
+
+          citas.push(nuevaCita);
+          persistirDatos();
+          mostrarMensaje("¡Cita agendada con éxito sin traslapes!");
+          formCita.reset();
+          renderizarCitas();
+        });
+      }
+
+      if (filtroEstado) {
+        filtroEstado.addEventListener("change", (e) => { renderizarCitas(e.target.value); });
+      }
+
+      if (tablaCitas) { renderizarCitas(); }
+
+      const formEspera = document.getElementById("fe");
+      if (formEspera) {
+        formEspera.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const paciente = formEspera.querySelector("input[name='paciente']").value;
+          const preferencia = formEspera.querySelector("select[name='medico']").selectedOptions[0].text;
+          listaEspera.push({ paciente, preferencia, tiempo: "Justo ahora" });
+          persistirDatos();
+          mostrarMensaje("Paciente agregado a la lista de espera correctamente.");
+          formEspera.reset();
+          renderizarListaEspera();
+        });
+        renderizarListaEspera();
+      }
+
+      const btnSim = document.getElementById("btn-sim");
+      const btnCaos = document.getElementById("btn-caos");
+      const btnLimpiar = document.getElementById("btn-limpiar");
+      
+      if (btnSim) {
+        btnSim.addEventListener("click", () => {
+          document.getElementById("sim-resultado").innerHTML = `<div class="flex flex-col items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[32px] animate-spin">sync</span><span class="font-headline-sm">Simulación ejecutada con éxito</span><span class="font-body-sm text-on-surface-variant">200 solicitudes simultáneas procesadas en el gen_server. Cero condiciones de carrera.</span></div>`;
+        });
+      }
+      if (btnCaos) {
+        btnCaos.addEventListener("click", () => {
+          document.getElementById("sim-resultado").innerHTML = `<div class="flex flex-col items-center gap-space-xs text-[#d97706]"><span class="material-symbols-outlined text-[32px]">warning</span><span class="font-headline-sm">Prueba de Caos Aplicada</span><span class="font-body-sm text-on-surface-variant">Se simuló la caída de la agenda. El supervisor rest_for_one reinició los recordatorios de manera íntegra.</span></div>`;
+        });
+      }
+      if (btnLimpiar) {
+        btnLimpiar.addEventListener("click", () => {
+          citas = [];
+          listaEspera = [];
+          persistirDatos();
+          mostrarMensaje("Agenda limpiada correctamente.", "error");
+          if (tablaCitas) renderizarCitas();
+        });
+      }
+    });
+
+    function renderizarCitas(filtro = "Todas") {
+      const tbody = document.getElementById("citas");
+      if (!tbody) return;
+      const citasFiltradas = filtro === "Todas" ? citas : citas.filter(c => c.estado === filtro);
+
+      if (citasFiltradas.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" class="text-center py-4 text-outline">No hay citas registradas para este filtro.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = citasFiltradas.map((c, index) => {
+        let badgeColor = "bg-[#e0f2fe] text-[#0284c7]";
+        if (c.estado === "Confirmadas" || c.estado === "Confirmada") badgeColor = "bg-[#dcfce7] text-[#16a34a]";
+        if (c.estado === "Canceladas" || c.estado === "Cancelada") badgeColor = "bg-[#fee2e2] text-[#dc2626]";
+        if (c.estado === "Por reagendar") badgeColor = "bg-[#fef3c7] text-[#d97706]";
+        const iniciales = c.paciente.split(" ").map(n => n[0]).join("").substring(0, 2).toUpperCase();
+
+        return `
+          <tr class="hover:bg-surface-container-low/50 transition-colors border-b border-surface-container">
+            <td class="py-space-md px-space-md font-label-md text-on-surface-variant">${index + 1}</td>
+            <td class="py-space-md px-space-md font-semibold text-on-surface">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-7 h-7 rounded-full bg-surface-container-high text-primary flex items-center justify-center text-[11px] font-bold">${iniciales}</div>
+                <span>${c.paciente}</span>
+              </div>
+            </td>
+            <td class="py-space-md px-space-md text-on-surface-variant whitespace-nowrap">${c.medico}</td>
+            <td class="py-space-md px-space-md"><span class="inline-block px-space-sm py-0.5 rounded bg-surface-container text-on-surface font-label-sm">${c.consultorio}</span></td>
+            <td class="py-space-md px-space-md whitespace-nowrap">
+              <div class="font-label-md text-on-surface">${new Date(c.inicio).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+              <div class="font-label-sm text-outline">${new Date(c.inicio).toLocaleDateString()}</div>
+            </td>
+            <td class="py-space-md px-space-md text-on-surface-variant">${c.duracion} min</td>
+            <td class="py-space-md px-space-md">
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm ${badgeColor}">
+                <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
+                ${c.estado}
+              </span>
+            </td>
+            <td class="py-space-md px-space-md text-right whitespace-nowrap">
+              <div class="inline-flex items-center gap-space-xs">
+                <button onclick="cambiarEstadoCita(${c.id}, 'Confirmada')" class="px-space-sm py-1 rounded bg-[#dcfce7] hover:bg-[#bbf7d0] text-[#16a34a] font-label-sm transition-colors">Confirmar</button>
+                <button onclick="cambiarEstadoCita(${c.id}, 'Cancelada')" class="px-space-sm py-1 rounded bg-[#fee2e2] hover:bg-[#fecaca] text-[#dc2626] font-label-sm transition-colors">Cancelar</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    window.cambiarEstadoCita = function(id, nuevoEstado) {
+      citas = citas.map(c => c.id === id ? { ...c, estado: nuevoEstado } : c);
+      if (nuevoEstado === "Cancelada" && listaEspera.length > 0) {
+        const atendido = listaEspera.shift();
+        mostrarMensaje(`Cita cancelada. El hueco fue reasignado automáticamente a ${atendido.paciente} (Lista de espera).`);
+      } else {
+        mostrarMensaje(`Estado de la cita actualizado a: ${nuevoEstado}`);
+      }
+      persistirDatos();
+      renderizarCitas();
+      if (document.getElementById("espera")) renderizarListaEspera();
+    };
+
+    function renderizarListaEspera() {
+      const contenedorEspera = document.getElementById("espera");
+      if (!contenedorEspera) return;
+      if (listaEspera.length === 0) {
+        contenedorEspera.innerHTML = `<p class="text-outline text-sm py-2">No hay pacientes en la lista de espera.</p>`;
+        return;
+      }
+      contenedorEspera.innerHTML = listaEspera.map((item, index) => `
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors gap-space-sm">
+          <div class="flex items-center gap-space-md">
+            <div class="w-8 h-8 rounded-full bg-primary/10 text-primary font-label-md flex items-center justify-center shrink-0">${index + 1}</div>
+            <div class="flex flex-col">
+              <span class="font-headline-sm text-body-lg font-semibold text-on-surface">${item.paciente}</span>
+              <div class="flex items-center gap-space-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-[15px] text-primary">person</span>
+                <span class="font-body-sm text-body-sm">Preferencia: ${item.preferencia}</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm sm:self-center self-end">
+            <span class="px-space-sm py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px]">history</span>
+              ${item.tiempo}
+            </span>
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+          </div>
+        </div>
+      `).join("");
+    }
+  </script>
+
+</body></html>
